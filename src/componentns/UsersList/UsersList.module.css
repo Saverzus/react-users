@@ -1,0 +1,83 @@
+.users {
+}
+.usersList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.usersListItem {
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
+  background: #2c2d2d;
+}
+.avatarContainer {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #545454;
+  width: 70px;
+  height: 70px;
+  gap: 13px;
+  border-radius: 10px;
+}
+.avatarText {
+  font-family: var(--mainFont);
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.namesList {
+}
+.namesItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.name {
+  font-family: var(--mainFont);
+  font-weight: 500;
+  font-size: 24px;
+  color: #fff;
+}
+.username {
+  font-family: var(--mainFont);
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.communicationList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.communicationItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  object-fit: cover;
+}
+.communicationPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.communicationImage {
+}
+.communicationLink {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
+}
+.communicationValue {
+}

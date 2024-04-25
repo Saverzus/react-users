@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+body {
+  background: var(--bodyBackground);
+}
+
+:root {
+  --mainFont: 'Roboto', sans-serif;
+  --headerBackground: #252627;
+  --bodyBackground: #252627;
+}

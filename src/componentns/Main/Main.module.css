@@ -1,0 +1,8 @@
+.main {
+  background: var(--mainBackground);
+}
+.container {
+  width: min(100%, 1660px);
+  margin: 0 auto;
+  padding: 20px 0;
+}
