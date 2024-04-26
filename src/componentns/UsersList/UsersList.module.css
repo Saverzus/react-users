@@ -1,3 +1,8 @@
+.dNone {
+}
+
+.dFlex {
+}
 .users {
 }
 .usersList {
@@ -10,7 +15,23 @@
   padding: 12px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   background: #2c2d2d;
+  max-height: 199px;
+  position: relative;
+  z-index: 10;
+  cursor: pointer;
 }
+
+.usersListItemActive {
+  border-radius: 20px;
+  padding: 12px;
+  box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
+  background: #2c2d2d;
+  max-height: 199px;
+  position: relative;
+  z-index: 20;
+  cursor: pointer;
+}
+
 .avatarContainer {
   display: flex;
   gap: 13px;
@@ -80,4 +101,42 @@
   color: #fff;
 }
 .communicationValue {
+}
+.hiddenUserList {
+  display: none;
+  gap: 10px;
+  position: absolute;
+  background: #2c2d2d;
+}
+.hiddenUserListActive {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  background: #2c2d2d;
+  position: absolute;
+  margin: -4px -12px 0 -12px;
+  padding: 10px 12px 12px 12px;
+}
+.hiddenUserItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  object-fit: cover;
+}
+.hiddenUserPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+}
+.hiddenUserImage {
+}
+.communicationText {
+  font-family: var(--mainFont);
+  font-weight: 400;
+  font-size: 15px;
+  color: #fff;
 }

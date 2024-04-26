@@ -1,23 +1,35 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import Filter from '../Filter/Filter.js'
-import UsersList from '../UsersList/UsersList.js'
-import styles from './Main.module.css'
+import React, { useState, useEffect } from 'react';
+import styles from './Main.module.css';
+import Filter from '../Filter/Filter.js';
+import UsersList from '../UsersList/UsersList.js';
 
 const Main = () => {
-
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('https://jsonplaceholder.typicode.com/users');
+                const jsonData = await response.json();
+                setUsers(jsonData);
+                setFilteredUsers(jsonData);
+            } catch (error) {
+                console.error('Ошибка при получении данных: c https://jsonplaceholder.typicode.com/users', error);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <Filter />
-                <UsersList />
+                <Filter users={users} setFilteredUsers={setFilteredUsers} />
+                <UsersList users={filteredUsers} />
             </div>
-
-        </main >
-    )
+        </main>
+    );
 }
 
-export default Main
+export default Main;
