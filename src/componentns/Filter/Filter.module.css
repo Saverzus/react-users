@@ -1,4 +1,77 @@
 .filter {
 }
+.filterContainer {
+  display: flex;
+  position: relative;
+  gap: 10px;
+  border-radius: 10px;
+  width: 400px;
+  height: 50px;
+  padding: 15px 29px 15px 16px;
+  margin: 0 0 20px 0;
+  background: #545454;
+}
+.selectedUserNameContainer {
+}
+.selectedUserName {
+  font-family: var(--mainFont);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  color: #fff;
+}
 .filter__input {
+  font-family: var(--mainFont);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  color: #fff;
+  background: #545454;
+}
+.flterArrow {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 20.82px;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.flterArrowImage {
+}
+
+.filteredUsersContainer {
+  background: #545454;
+  width: 400px;
+  border-radius: 10px;
+  display: flex;
+  min-height: 40px;
+}
+.filteredUsersList {
+}
+.filteredUsersItem {
+  display: flex;
+  gap: 10px;
+  font-family: var(--mainFont);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 167%;
+  color: #fff;
+  padding: 10px 16px;
+}
+.filteredUsersCheckbox {
+  background: #ffffff;
+  border: 2px solid #f2f3f5;
+  border-radius: 5px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+}
+.filteredUsersCheckboxImage {
+  display: flex;
+  padding: 5px 4px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+}
+.filteredUsersName {
 }

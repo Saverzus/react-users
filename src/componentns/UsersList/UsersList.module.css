@@ -10,6 +10,25 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
+
+@media screen and (max-width: 1660px) {
+  .usersList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .usersList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .usersList {
+    grid-template-columns: 1fr;
+  }
+}
+
 .usersListItem {
   border-radius: 20px;
   padding: 12px;
@@ -23,7 +42,7 @@
 
 .usersListItemActive {
   border-radius: 20px;
-  padding: 12px;
+  padding: 12px 12px 10px 12px;
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   background: #2c2d2d;
   max-height: 199px;
@@ -117,7 +136,7 @@
   background: #2c2d2d;
   position: absolute;
   margin: -4px -12px 0 -12px;
-  padding: 10px 12px 12px 12px;
+  padding: 10px 12px 9px 12px;
 }
 .hiddenUserItem {
   display: flex;

@@ -83,7 +83,7 @@ const UsersList = ({ users }) => {
                         <ul className={clickedUser === user.id ? styles.hiddenUserListActive : styles.hiddenUserList}>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={street} width="14.4" alt="Street Icon" title="Street" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={street} width="14.4" alt="Street Icon" title="Street" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     street:<span className={styles.communicationValue}>{user.address.street}</span>
@@ -91,7 +91,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={suite} width="14.4" alt="Suite Icon" title="Suite" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={suite} width="14.4" alt="Suite Icon" title="Suite" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     suite:<span className={styles.communicationValue}>{user.address.suite}</span>
@@ -99,7 +99,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={city} width="15.2" alt="City Icon" title="City" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={city} width="15.2" alt="City Icon" title="City" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     city:<span className={styles.communicationValue}>{user.address.city}</span>
@@ -107,7 +107,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={zipcode} width="15.2" alt="Zipcode Icon" title="Zipcode" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={zipcode} width="15.2" alt="Zipcode Icon" title="Zipcode" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     zipcode:<span className={styles.communicationValue}>{user.address.zipcode}</span>
@@ -115,7 +115,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={company} width="14.4" alt="Company Icon" title="Company" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={company} width="14.4" alt="Company Icon" title="Company" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     company:<span className={styles.communicationValue}>{user.company.name}</span>
@@ -123,7 +123,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={catchPhrase} width="14.4" alt="Catch Phrase Icon" title="Catch Phrase" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={catchPhrase} width="14.4" alt="Catch Phrase Icon" title="Catch Phrase" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     catchPhrase:<span className={styles.communicationValue}>{user.company.catchPhrase}</span>
@@ -131,7 +131,7 @@ const UsersList = ({ users }) => {
                             </li>
                             <li className={styles.hiddenUserItem}>
                                 <picture className={styles.hiddenUserPicture}>
-                                    <img className={styles.hiddenUserImage} src={bs} width="14.4" alt="bs Phrase Icon" title="bs" />
+                                    <img loading="lazy" className={styles.hiddenUserImage} src={bs} width="14.4" alt="bs Phrase Icon" title="bs" />
                                 </picture>
                                 <p className={styles.communicationText}>
                                     bs:<span className={styles.communicationValue}>{user.company.bs}</span>
