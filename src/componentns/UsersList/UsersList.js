@@ -13,7 +13,6 @@ import bs from '../../images/user/bs.svg';
 
 
 const UsersList = ({ users }) => {
-    const [selectedUser, setSelectedUser] = useState(null);
     const [clickedUser, setClickedUser] = useState();
 
     const handleUserClick = (userId) => {

@@ -4,27 +4,33 @@ import styles from './Filter.module.css';
 import arrow from '../../images/filter/arrow.svg';
 import check from '../../images/filter/check.svg';
 
-
-const Filter = ({ users, setFilteredUsers }) => {
-    const [searchName, setsearchName] = useState([]);
+const Filter = ({ users, selectedUsers, setSelectedUsers }) => {
+    const [filteredUsers, setFilteredUsers] = useState(users);
 
     const handleFilterSearch = (event) => {
-        const filteredUsers = users.filter(user => user.name.toLowerCase().includes(event.target.value.toLowerCase()));
-        setFilteredUsers(filteredUsers);
-        setsearchName(event.target.value);
+        const searchTerm = event.target.value.toLowerCase();
+        const filteredResults = users.filter(user => user.name.toLowerCase().includes(searchTerm));
+        setFilteredUsers(filteredResults);
+    };
+
+    const handleUserClick = (user) => {
+        if (selectedUsers.includes(user)) {
+            setSelectedUsers(selectedUsers.filter(selectedUser => selectedUser !== user));
+        } else {
+            setSelectedUsers([...selectedUsers, user]);
+        }
     };
 
     return (
         <div className={styles.filter}>
             <div className={styles.filterContainer}>
-                <div className={styles.selectedUserNameContainer}>
-                    <p className={styles.selectedUserName}>Select name</p>
-                </div>
+                {selectedUsers.map((user, index) => (
+                    <p key={index} className={styles.selectedUserName}>{user.name}</p>
+                ))}
                 <input
                     className={styles.filter__input}
                     type="text"
                     placeholder='Select name'
-                    value={searchName}
                     onChange={handleFilterSearch}
                 />
                 <button className={styles.flterArrow}>
@@ -34,13 +40,26 @@ const Filter = ({ users, setFilteredUsers }) => {
 
             <div className={styles.filteredUsersContainer}>
                 <ul className={styles.filteredUsersList}>
-                    <li className={styles.filteredUsersItem}>
-                        <span className={styles.filteredUsersCheckbox}>
-                            <img className={styles.filteredUsersCheckboxImage} width="8" src={check} alt="checkbox" title="" />
-                        </span>
-                        <p className={styles.filteredUsersName}>Leanne Robert</p>
-                    </li>
-
+                    {filteredUsers.map(user => (
+                        <li
+                            key={user.id}
+                            className={styles.filteredUsersItem}
+                            onClick={() => handleUserClick(user)}
+                        >
+                            <span className={styles.filteredUsersCheckbox}>
+                                {selectedUsers.includes(user) && (
+                                    <img
+                                        className={styles.filteredUsersCheckboxImage}
+                                        width="8"
+                                        src={check}
+                                        alt="checkbox"
+                                        title="checkbox"
+                                    />
+                                )}
+                            </span>
+                            <p className={styles.filteredUsersName}>{user.name}</p>
+                        </li>
+                    ))}
                 </ul>
             </div>
 
