@@ -1,3 +1,51 @@
-.filter__info {
+.filterInfo {
   margin: 0 0 20px 0;
+}
+.filterShortInfoContainer {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+}
+.filterShortInfoQuantityContainer {
+  font-family: var(--mainFont);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 167%;
+  color: #878787;
+}
+.filterShortInfoQuantityValue {
+}
+.filterShortInfoClear {
+  font-family: var(--mainFont);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 167%;
+  color: #fff;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.filterInfoPickedUsersContainer {
+  display: flex;
+  padding: 0 0 0 8px;
+}
+.filterInfoPickedUsersText {
+  font-family: var(--mainFont);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 167%;
+  color: #fff;
+}
+.filterInfoPickedUsersList {
+  display: flex;
+}
+.filterInfoPickedUsersItem {
+}
+.filterInfoPickedUsersItemText {
+  font-family: var(--mainFont);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 167%;
+  font-weight: 700;
+  color: #878787;
 }

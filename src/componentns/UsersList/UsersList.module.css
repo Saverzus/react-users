@@ -40,6 +40,13 @@
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  .usersListItem {
+    width: min(400px, 100%);
+    margin: auto;
+  }
+}
+
 .usersListItemActive {
   border-radius: 20px;
   padding: 12px 12px 10px 12px;

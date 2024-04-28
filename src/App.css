@@ -19,7 +19,17 @@ input {
 
 body {
   background: var(--bodyBackground);
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: #2c2d2d;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #545454;
+  border-radius: 22px;
 }
 
 :root {
