@@ -1,4 +1,3 @@
-// Main.js
 import React, { useState, useEffect } from 'react';
 import styles from './Main.module.css';
 import Filter from '../Filter/Filter.js';

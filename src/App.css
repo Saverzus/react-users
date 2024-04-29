@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,6 +21,10 @@ input {
 body {
   background: var(--bodyBackground);
   overflow-x: hidden;
+}
+
+.bodyBackdrop {
+  background: #1a1a1b;
 }
 
 ::-webkit-scrollbar {

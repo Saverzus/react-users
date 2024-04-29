@@ -2,6 +2,8 @@
   position: relative;
 }
 .filterContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   gap: 10px;
@@ -11,7 +13,9 @@
   padding: 15px 29px 15px 16px;
   margin: 0 0 20px 0;
   background: #545454;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .selectedUserNameContainer {
 }
@@ -30,27 +34,52 @@
   color: #fff;
   background: #545454;
 }
+.filter__input::-webkit-input-placeholder {
+  color: #fff;
+}
+.filter__input::-moz-placeholder {
+  color: #fff;
+}
+.filter__input:-ms-input-placeholder {
+  color: #fff;
+}
+.filter__input::-ms-input-placeholder {
+  color: #fff;
+}
+.filter__input::placeholder {
+  color: #fff;
+}
 .flterArrow {
   border: none;
   background: none;
   position: absolute;
   right: 20.82px;
   top: 25px;
+  -webkit-transform: translate(0px, -50%);
+  -ms-transform: translate(0px, -50%);
   transform: translate(0px, -50%);
+  cursor: pointer;
 }
 .flterArrowImage {
+}
+.flterArrowImageRotate {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .filteredUsersContainer {
   background: #545454;
   width: 400px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-height: 40px;
   position: absolute;
   z-index: 30;
   max-height: 160px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .filteredUsersContainer::-webkit-scrollbar {
   width: 12px;
@@ -64,6 +93,8 @@
 .filteredUsersList {
 }
 .filteredUsersItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 10px;
   font-family: var(--mainFont);
@@ -78,11 +109,15 @@
   background: #ffffff;
   border: 2px solid #f2f3f5;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 20px;
   height: 20px;
 }
 .filteredUsersCheckboxImage {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 5px 4px;
   width: 100%;

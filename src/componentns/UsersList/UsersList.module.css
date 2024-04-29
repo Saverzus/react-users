@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .dNone {
 }
 
@@ -6,25 +13,30 @@
 .users {
 }
 .usersList {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 
 @media screen and (max-width: 1660px) {
   .usersList {
+    -ms-grid-columns: (1fr) [3];
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 1250px) {
   .usersList {
+    -ms-grid-columns: (1fr) [2];
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
   .usersList {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
@@ -32,12 +44,17 @@
 .usersListItem {
   border-radius: 20px;
   padding: 12px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   background: #2c2d2d;
   max-height: 199px;
   position: relative;
   z-index: 10;
   cursor: pointer;
+}
+
+.usersListItemDeactive {
+  opacity: 0.3;
 }
 
 @media (max-width: 768px) {
@@ -50,23 +67,36 @@
 .usersListItemActive {
   border-radius: 20px;
   padding: 12px 12px 10px 12px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.13);
   background: #2c2d2d;
   max-height: 199px;
   position: relative;
   z-index: 20;
   cursor: pointer;
+  -webkit-filter: brightness(1.2);
+  filter: brightness(1.2);
 }
 
 .avatarContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 13px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 0 10px 0;
 }
 .avatar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   background: #545454;
   width: 70px;
@@ -84,7 +114,12 @@
 .namesList {
 }
 .namesItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
@@ -101,19 +136,35 @@
   color: #fff;
 }
 .communicationList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
 .communicationItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 5px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .communicationPicture {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 25px;
   height: 25px;
@@ -135,7 +186,12 @@
   background: #2c2d2d;
 }
 .hiddenUserListActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
   width: 100%;
@@ -146,14 +202,25 @@
   padding: 10px 12px 9px 12px;
 }
 .hiddenUserItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 5px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .hiddenUserPicture {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   width: 25px;
   height: 25px;

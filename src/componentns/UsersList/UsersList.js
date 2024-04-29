@@ -18,8 +18,10 @@ const UsersList = ({ users }) => {
     const handleUserClick = (userId) => {
         if (clickedUser === userId) {
             setClickedUser(null);
+            document.body.classList.remove('bodyBackdrop');
         } else {
             setClickedUser(userId);
+            document.body.classList.add('bodyBackdrop');
         }
     }
 
@@ -32,7 +34,7 @@ const UsersList = ({ users }) => {
                 {users.map((user) => (
                     <li
                         key={user.id}
-                        className={clickedUser === user.id ? styles.usersListItemActive : styles.usersListItem}
+                        className={clickedUser === user.id ? styles.usersListItemActive : (clickedUser ? `${styles.usersListItem} ${styles.usersListItemDeactive}` : styles.usersListItem)}
                         onClick={() => handleUserClick(user.id)}
                     >
                         <div className={styles.avatarContainer}>

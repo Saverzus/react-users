@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .main {
   background: var(--mainBackground);
   position: relative;
@@ -13,6 +20,8 @@
   }
 }
 .backdrop {
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   position: absolute;
   background-color: #000000;
@@ -23,6 +32,8 @@
 }
 
 .backdropActive {
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   opacity: 0.31;
 }
