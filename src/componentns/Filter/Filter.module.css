@@ -70,7 +70,6 @@
 
 .filteredUsersContainer {
   background: #545454;
-  width: 400px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,6 +79,7 @@
   z-index: 30;
   max-height: 160px;
   overflow-y: auto;
+  width: min(400px, 100%);
 }
 .filteredUsersContainer::-webkit-scrollbar {
   width: 12px;
